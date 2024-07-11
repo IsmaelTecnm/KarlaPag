@@ -1,0 +1,265 @@
+/* Estilos Globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Imagen de fondo */
+.imagen-fondo {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.imagen-fondo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: linear-gradient(to top, #28a745, #2fdb57);
+    color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 40px; /* Tamaño de la imagen de la manzana */
+    height: auto;
+    margin-right: 10px; /* Espacio entre la imagen y el texto */
+}
+
+h1 {
+    margin: 0; /* Elimina el margen del h1 */
+    font-size: 24px;
+    line-height: 1; /* Ajusta el espaciado entre líneas del texto */
+}
+
+nav {
+    margin-left: auto; /* Empuja el nav hacia la derecha */
+}
+
+nav ul {
+    list-style-type: none;
+    margin-top: 5px;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+   
+    margin: 5px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s;
+    padding: 5px 10px; /* Asegúrate de tener un poco de espacio alrededor del texto */
+}
+
+nav ul li a:hover {
+    color: #bec0c2;
+}
+
+/* Secciones */
+section {
+    padding: 50px 20px;
+    margin-bottom: 40px;
+    margin-top: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    transition: transform 0.3s ease-in-out;
+    opacity: 0.9;
+}
+
+section:hover {
+    transform: translateY(-10px);
+}
+
+section h2 {
+    font-size: 32px;
+    color: #28a745;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+section p {
+    font-size: 18px;
+    line-height: 1.8;
+    text-align: center;
+}
+
+section#servicios ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+section#servicios li {
+    width: calc(33.33% - 20px);
+    margin-bottom: 20px;
+}
+
+section#servicios h3 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+section#servicios p {
+    font-size: 20px;
+    line-height: 1.6;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Estilos para la sección de contacto y los íconos de redes sociales */
+section#contacto {
+    text-align: center;
+    padding: 50px 20px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+.social-icons {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.social-icons a {
+    margin-right: 10px;
+    font-size: 35px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #333;
+}
+
+.social-icons a:hover .fab.fa-whatsapp {
+    color: #25D366;
+}
+
+.social-icons a:hover .fab.fa-facebook {
+    color: #3b5998;
+}
+
+.social-icons a:hover .fab.fa-instagram {
+    color: #c13584;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+/* Media query para estilos responsivos */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .logo-wrapper {
+        justify-content: flex-end; /* Alinea la manzana a la derecha */
+        flex: 1; /* Expande el espacio disponible */
+    }
+
+    .logo {
+        width: 30px; /* Reducción del tamaño de la manzana en modo móvil */
+        margin-right: 10px; /* Reducimos el margen para móvil */
+    }
+
+    header h1 {
+        font-size: 30px;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        margin-left: 0; /* Reinicia el margen para centrar en modo móvil */
+        width: 100%; /* Ocupa todo el ancho disponible */
+    }
+
+    nav ul {
+        flex-direction: column; /* Muestra los elementos verticalmente */
+        align-items: flex-start; /* Alinea los elementos a la izquierda */
+    }
+
+    nav ul li {
+        margin-left: 0; /* Elimina el margen izquierdo en modo móvil */
+        margin-bottom: 5px; /* Espacio entre los elementos de la lista */
+    }
+
+    section {
+        margin-bottom: 30px;
+        padding: 20px;
+    }
+
+    section#servicios ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section#servicios li {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .social-icons a {
+        margin-right: 10px;
+        font-size: 24px;
+        color: #333;
+        transition: color 0.3s;
+    }
+}
